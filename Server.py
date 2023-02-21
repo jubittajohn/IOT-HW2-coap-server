@@ -4,7 +4,7 @@ import aiocoap.resource as resource
 import asyncio
 import logging
 
-HOST_NAME = 'localhost'
+HOST_NAME = '127.0.0.1'
 PORT_NUMBER = 5683
 logging.basicConfig(level=logging.INFO)
 
@@ -18,6 +18,7 @@ class FileServer(resource.Resource):
             if os.path.exists(filepath):
                 with open(filepath, 'rb') as file:
                     data = file.read()
+                    print("PUT - ", filename, " - CoAP")
                     return aiocoap.Message(code=aiocoap.CONTENT, payload=data)
             
             else:

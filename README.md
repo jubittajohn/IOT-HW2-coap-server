@@ -12,8 +12,8 @@ The file IOT_HW2-coap-server has the following data:
     ```  pip3 install aiocoap```
 
 ## How to excute CoAP server
-- Host name is predefined to '127.0.0.1'. So no changes are required to be made in CoAP server.
-- Directly run the server and the http server is now ready to receive request from client
+- Host name is predefined to '127.0.0.1'. This is to be changed if client and server are run on different systems. Change the HOST_NAME on line 7 to the local ip address.
+- Directly run the server and the http server is now ready to receive request from client.
 
 ## What happens in CoAP server
 -  The following will be output by the CoAP server when it receives a PUT request from the client:
